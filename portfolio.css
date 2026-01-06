@@ -29,10 +29,15 @@ body {
   }
 
   .menu {
+    align-items: center;
     display: none;
     flex-direction: column;
+    justify-content: center;
+    position: fixed;
     width: 100%;
+    height: 100vh;
     background-color: #ea638c;
+    width: 100%;
     position: absolute;
     top: 60px;
     left: 0;
