@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #1b2021;
+  margin: 0px;
+}
+
+.burger {
+  display: none; /* hide on desktop */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(198, 89, 194);
+  display: block;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+    margin-left: 6px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ea638c;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
