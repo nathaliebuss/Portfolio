@@ -15,6 +15,42 @@ body {
   margin: 0;
 }
 
+main {
+  background-color: #1b2021;
+  width: 100%;
+}
+
+/* HOME BACKGROUND IMG */
+.home {
+  align-items: center;
+  background: url("images/js.webp") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 40vh;
+  position: relative;
+  width: 100%;
+}
+
+.home::before {
+  content: "";
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.home,
+.main_content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
 .header_title {
   color: #b5d6d6;
   font-size: 3.5rem;
@@ -30,9 +66,9 @@ body {
 /* NAVBAR FOR DESKTOP */
 .menu {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   text-decoration: none;
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .menu a {
@@ -40,7 +76,7 @@ body {
   font-size: 1.2rem;
   text-decoration: none;
 }
-/* BIRGER MENU FOR IPHONE */
+/* BURGER MENU FOR IPHONE */
 .burger {
   display: none; /* hide on desktop */
   cursor: pointer;
@@ -55,7 +91,21 @@ body {
   display: block;
 }
 
-/* PROJECT CARD LOGICS */
+/* HOME */
+.home_title {
+  color: #e5a5b8;
+  margin: 10px;
+  text-align: left;
+}
+
+.home_description {
+  color: #e5a5b8;
+  font-size: 18px;
+  margin: 10px;
+  text-align: left;
+}
+
+/* PROJECT CARD */
 .flex_cards {
   display: flex;
   flex-wrap: wrap;
@@ -111,7 +161,7 @@ body {
 .card p {
   font-size: 1.1rem;
   line-height: 1.5;
-  color: #b5d6d6;
+  color: #dcdbdb;
   margin-bottom: 15px;
 }
 
@@ -132,46 +182,41 @@ body {
   color: #1b2021;
 }
 
-.home_description {
-  color: #b5d6d6;
-  font-family: Arial, Helvetica;
-  font-size: 18px;
-  margin: 12px;
-}
-
 /* ABOUT ME*/
 .about_content {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
   padding: 40px 20px;
 }
 
 .profile_img {
-  width: 250px;
-  height: 250px;
-  border-radius: 20%;
-  object-fit: cover;
   border: 4px solid #e787a4;
+  border-radius: 20%;
+  height: 250px;
+  object-fit: cover;
+  width: 250px;
 }
 
 .about_text {
   color: #b5d6d6;
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 /* SKILLS */
 .skills_grid {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
+  justify-content: center;
+  list-style: none;
   padding: 20px;
 }
 
 .project_title {
-  color: #b5d6d6;
+  color: #e787a4;
   text-align: center;
 }
 
@@ -183,16 +228,20 @@ body {
   border-radius: 6px;
 }
 
+.tags {
+  color: #e5a5b8;
+}
+
 /* CONTACT */
 .email_link {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #e94677;
   color: white;
-  text-decoration: none;
+  background-color: #e94677;
   border-radius: 20px;
+  display: inline-block;
   font-weight: bold;
+  margin-top: 15px;
+  text-decoration: none;
+  padding: 10px 20px;
   transition: background 0.3s;
 }
 

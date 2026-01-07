@@ -23,11 +23,14 @@
       <a href="#about-me">ABOUT ME</a>
     </nav>
 
-    <main class="container">
-      <section id="home" class="content-section">
-        <h4 class="home_description">
-          Hi! I'm Nathalie, a soon to be Frontend Developer!
-        </h4>
+    <main>
+      <section id="home" class="home">
+        <div class="main_content">
+          <h2 class="home_title">Welcome To My Portfolio!</h2>
+          <h4 class="home_description">
+            Hi! I'm Nathalie, a soon to be Frontend Developer!
+          </h4>
+        </div>
       </section>
 
       <section id="projects" class="card_group">
@@ -39,9 +42,11 @@
         <h2 class="project_title">ABOUT ME</h2>
         <div class="about_content">
           <img
-            src="images/me.jpeg"
+            src="images/me.webp"
             alt="Portrait of Nathalie Buss"
             class="profile_img"
+            width="250"
+            height="250"
           />
           <p class="about_text">
             I am a student passionate about building clean, responsive, and
@@ -53,20 +58,32 @@
 
       <section id="skills" class="skills_section">
         <h2 class="project_title">TECH SKILLS</h2>
-        <div class="skills_grid">
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">Responsive Design</span>
-        </div>
+        <ul class="skills_grid">
+          <li class="skill-tag">HTML5</li>
+          <li class="skill-tag">CSS3</li>
+          <li class="skill-tag">JavaScript</li>
+          <li class="skill-tag">GitHub</li>
+          <li class="skill-tag">Git</li>
+          <li class="skill-tag">Responsive Design</li>
+        </ul>
       </section>
     </main>
-
     <footer class="footer">
-      <h2 class="project_title">CONTACT</h2>
+      <h2 class="project_title">CONTACT ME</h2>
       <p>Feel free to reach out to me!</p>
       <p>Phone: +46 123 456 7890</p>
+      <a
+        class="email_link"
+        href="hhttps://www.linkedin.com/in/nathaliebuss/ "
+        target="_blank"
+        >LinkedIn</a
+      >
+      <a
+        class="email_link"
+        href="https://github.com/nathaliebuss"
+        target="_blank"
+        >Github</a
+      >
       <a href="mailto:nathaliebuss21@gmail.com" class="email_link">Email Me</a>
       <p class="footer_bottom">&copy; 2026 Nathalie</p>
     </footer>
