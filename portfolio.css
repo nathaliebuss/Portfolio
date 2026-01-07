@@ -12,19 +12,16 @@ body {
   background-color: #1b2021;
   margin: 0px;
   transition: background-color 0.4s ease, color 0.4s ease;
-  margin: 0;
 }
 
 main {
-  background-color: #1b2021;
   width: 100%;
 }
 
 /* HOME BACKGROUND IMG */
 .home {
   align-items: center;
-  background: url("images/js.webp") no-repeat center center;
-  background-size: cover;
+  background: url("images/js.webp") no-repeat center center / cover;
   display: flex;
   justify-content: center;
   min-height: 40vh;
@@ -52,7 +49,7 @@ main {
 }
 
 .header_title {
-  color: #b5d6d6;
+  color: #e787a4;
   font-size: 3.5rem;
   text-align: center;
 }
@@ -65,10 +62,16 @@ main {
 
 /* NAVBAR FOR DESKTOP */
 .menu {
+  background-color: #1b2021;
   display: flex;
   justify-content: space-between;
   text-decoration: none;
-  margin: 10px;
+  margin: 0px;
+  top: 0px;
+  position: sticky;
+  padding: 12px;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  z-index: 1000;
 }
 
 .menu a {
@@ -76,9 +79,17 @@ main {
   font-size: 1.2rem;
   text-decoration: none;
 }
+
+/* NAVBAR CHANGE */
+.menu.scrolled {
+  background-color: #89023e;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  padding: 10px 30px;
+}
+
 /* BURGER MENU FOR IPHONE */
 .burger {
-  display: none; /* hide on desktop */
+  display: none;
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
@@ -112,7 +123,6 @@ main {
   gap: 40px;
   flex-direction: row;
   justify-content: center;
-  padding: 24px;
   text-align: center;
   padding: 60px 20px;
 }
@@ -199,8 +209,8 @@ main {
   width: 250px;
 }
 
-.about_text {
-  color: #b5d6d6;
+.about_me {
+  color: #d6c9d0;
   font-size: 1.2rem;
   line-height: 1.5;
 }
@@ -216,6 +226,7 @@ main {
 }
 
 .project_title {
+  font-size: 2rem;
   color: #e787a4;
   text-align: center;
 }
@@ -250,6 +261,16 @@ main {
   color: #484848;
 }
 
+.email_link.linkedin:hover {
+  background-color: #1065c4;
+  color: #dcdbdb;
+}
+
+.email_link.github:hover {
+  background-color: #333;
+  color: #d6c9d0;
+}
+
 /* FOOTER */
 .footer {
   background-color: #15191a;
@@ -262,40 +283,6 @@ main {
   margin-top: 30px;
   font-size: 0.8rem;
   opacity: 0.6;
-}
-
-.linkedin {
-  color: white;
-  background-color: #e94677;
-  border-radius: 20px;
-  display: inline-block;
-  font-weight: bold;
-  margin-top: 15px;
-  text-decoration: none;
-  padding: 10px 20px;
-  transition: background 0.3s;
-}
-
-.linkedin:hover {
-  background-color: #1065c4;
-  color: #dcdbdb;
-}
-
-.github {
-  color: white;
-  background-color: #e94677;
-  border-radius: 20px;
-  display: inline-block;
-  font-weight: bold;
-  margin-top: 15px;
-  text-decoration: none;
-  padding: 10px 20px;
-  transition: background 0.3s;
-}
-
-.github:hover {
-  background-color: #1b2021;
-  color: #dcdbdb;
 }
 
 /* Desktop layout for about me */
