@@ -255,13 +255,47 @@ main {
   background-color: #15191a;
   padding: 40px 10px;
   text-align: center;
-  color: #b5d6d6;
+  color: #d6c9d0;
 }
 
 .footer_bottom {
   margin-top: 30px;
   font-size: 0.8rem;
   opacity: 0.6;
+}
+
+.linkedin {
+  color: white;
+  background-color: #e94677;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 15px;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background 0.3s;
+}
+
+.linkedin:hover {
+  background-color: #1065c4;
+  color: #dcdbdb;
+}
+
+.github {
+  color: white;
+  background-color: #e94677;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 15px;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background 0.3s;
+}
+
+.github:hover {
+  background-color: #1b2021;
+  color: #dcdbdb;
 }
 
 /* Desktop layout for about me */
