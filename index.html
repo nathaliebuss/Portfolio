@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nathalie Buss</title>
+    <title>Nathalie Buss | Portfolio</title>
     <link rel="stylesheet" href="portfolio.css" />
     <script src="portfolio.js" defer></script>
   </head>
@@ -14,18 +14,61 @@
         <span class="btn"></span>
         <span class="btn"></span>
       </div>
-      <h1 class="header_title" id="header_title">NATHALIE BUSS</h1>
+      <h1 class="header_title">NATHALIE BUSS</h1>
     </header>
 
     <nav class="menu" id="menu">
-      <a class="home" href="index.html">HOME</a>
-      <a class="project" href="project-site.html">PROJECTS</a>
-      <a class="contact" href="about-me.html">ABOUT ME</a>
+      <a href="#home">HOME</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#about-me">ABOUT ME</a>
     </nav>
 
-    <div class="container" id="container">
-      <p class="home_description">Welcome to my portfolio!</p>
-      <div class="grid" id="grid"></div>
-    </div>
+    <main class="container">
+      <section id="home" class="content-section">
+        <h4 class="home_description">
+          Hi! I'm Nathalie, a soon to be Frontend Developer!
+        </h4>
+      </section>
+
+      <section id="projects" class="card_group">
+        <h2 class="project_title">PROJECTS</h2>
+        <div class="flex_cards" id="project-container"></div>
+      </section>
+
+      <section id="about-me" class="about_section">
+        <h2 class="project_title">ABOUT ME</h2>
+        <div class="about_content">
+          <img
+            src="images/me.jpeg"
+            alt="Portrait of Nathalie Buss"
+            class="profile_img"
+          />
+          <p class="about_text">
+            I am a student passionate about building clean, responsive, and
+            user-friendly websites. When I'm not coding, I'm likely with my
+            friends, watch a movie or keeping up with the latest tech news.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="skills_section">
+        <h2 class="project_title">TECH SKILLS</h2>
+        <div class="skills_grid">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Responsive Design</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <h2 class="project_title">CONTACT</h2>
+      <p>Feel free to reach out to me!</p>
+      <p>Phone: +46 123 456 7890</p>
+      <a href="mailto:nathaliebuss21@gmail.com" class="email_link">Email Me</a>
+      <p class="footer_bottom">&copy; 2026 Nathalie</p>
+    </footer>
   </body>
 </html>

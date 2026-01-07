@@ -2,38 +2,45 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  min-height: 80vh;
+}
+
 body {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #1b2021;
   margin: 0px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  margin: 0;
 }
 
 .header_title {
   color: #b5d6d6;
   font-size: 3.5rem;
-  font-family: Arial, Helvetica;
   text-align: center;
 }
 
 .subtitle {
   color: #b5d6d6;
   font-size: 2rem;
-  font-family: Arial, Helvetica;
   text-align: center;
 }
 
+/* NAVBAR FOR DESKTOP */
 .menu {
   display: flex;
   justify-content: space-evenly;
   text-decoration: none;
+  margin-top: 10px;
 }
 
 .menu a {
   color: #e787a4;
   font-size: 1.2rem;
-  font-family: Arial, Helvetica;
   text-decoration: none;
 }
-
+/* BIRGER MENU FOR IPHONE */
 .burger {
   display: none; /* hide on desktop */
   cursor: pointer;
@@ -48,12 +55,174 @@ body {
   display: block;
 }
 
+/* PROJECT CARD LOGICS */
+.flex_cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex-direction: row;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.flex_cards h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.card_group {
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card {
+  background: #89023e;
+  border-radius: 12px;
+  padding: 30px;
+  width: 400px;
+  max-width: 80%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* CARD IMAGES */
+.card img {
+  width: 100%;
+  height: 250px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #e787a4;
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #b5d6d6;
+  margin-bottom: 15px;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #1b2021;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.link:hover {
+  background-color: #e9b9c7;
+  color: #1b2021;
+}
+
 .home_description {
   color: #b5d6d6;
   font-family: Arial, Helvetica;
   font-size: 18px;
   margin: 12px;
 }
+
+/* ABOUT ME*/
+.about_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.profile_img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20%;
+  object-fit: cover;
+  border: 4px solid #e787a4;
+}
+
+.about_text {
+  color: #b5d6d6;
+  font-size: 1.2rem;
+}
+
+/* SKILLS */
+.skills_grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+}
+
+.project_title {
+  color: #b5d6d6;
+  text-align: center;
+}
+
+.skill-tag {
+  background: #333;
+  color: #e787a4;
+  padding: 10px 20px;
+  border: 2px solid #e787a4;
+  border-radius: 6px;
+}
+
+/* CONTACT */
+.email_link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #e94677;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.email_link:hover {
+  background-color: #e89db4;
+  color: #484848;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #15191a;
+  padding: 40px 10px;
+  text-align: center;
+  color: #b5d6d6;
+}
+
+.footer_bottom {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Desktop layout for about me */
+@media (min-width: 768px) {
+  .about_content {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
   .burger {
@@ -71,7 +240,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     position: fixed;
     height: 80vh;
     background-color: #e787a4;

@@ -1,15 +1,65 @@
 const burgerMenu = document.getElementById("burger");
 const navMenu = document.getElementById("menu");
-const navLink = document.querySelectorAll(".menu a");
+const navLinks = document.querySelectorAll(".menu a");
 
 //LOGIC FOR SHOWING THE MENU
 burgerMenu.addEventListener("click", () => {
+  burgerMenu.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
 
 //LOGIC THAT HIDES THE MENU WHEN CLICKED
-navLink.forEach((link) => {
+navLinks.forEach((link) => {
   link.addEventListener("click", () => {
+    burgerMenu.classList.remove("active");
     navMenu.classList.remove("active");
   });
 });
+
+const myProjects = [
+  {
+    title: "In-House Exam",
+    description:
+      "Made a website based on a design we got in class. We were not allowed to use AI but we were allowed to look at past homework.",
+    link: "https://github.com/nathaliebuss/In-House-test---HTML-CSS",
+    image: "images/web.png",
+    tags: ["HTML", "CSS"],
+  },
+  {
+    title: "Zoo Group Assignment",
+    image: "images/zoo.png",
+    description:
+      "A collaborative javascript project. The group were tasked to make a website for an Australian zoo. The goal for the assignment was to hardcode as little as possible and use our javascript knowledge to populate the page.",
+    link: "https://github.com/nathaliebuss/Group-zoo-assignment",
+    demo: "https://group-zoo-assignment.vercel.app/",
+    tags: ["Javascript", "HTML", "CSS"],
+  },
+];
+
+const projectContainer = document.getElementById("project-container");
+
+function displayProjects() {
+  myProjects.forEach((project) => {
+    let tagsHTML = "";
+
+    for (const tag of project.tags) {
+      tagsHTML += `<span class="tag">${tag}</span>`;
+    }
+
+    const cardHTML = `
+            <div class="card">
+                <img src="${project.image}" alt="${project.title}" />
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="tags">
+                    ${tagsHTML}
+                </div>
+               <a class="link" href="${project.link}" target="_blank">GitHub</a>
+            <a class="link" href="${project.demo}" target="_blank">Demo</a>
+            </div>
+        `;
+
+    projectContainer.innerHTML += cardHTML;
+  });
+}
+displayProjects();
