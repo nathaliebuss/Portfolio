@@ -19,16 +19,17 @@ navLinks.forEach((link) => {
 // OBJECT //
 const myProjects = [
   {
-    title: "In-House Exam",
+    title: "Movie Night Website",
     description:
       "Made a website based on a design we got in class. We were not allowed to use any AI but we were allowed to look at past homework. Was a grrat way of testing our CSS and HTML knowledge.",
-    link: "https://github.com/nathaliebuss/In-House-test---HTML-CSS",
-    image: "images/web.webp",
+    link: "https://github.com/Callum-Jones230893/API-group-assignment",
+    demo: "https://api-group-assignment.vercel.app/",
+    image: "images/mini-movie.webp",
     tags: ["HTML", "CSS"],
   },
   {
     title: "Zoo Group Assignment",
-    image: "images/zoo.webp",
+    image: "images/zoo-mini.webp",
     description:
       "A collaborative javascript project. The group were tasked to make a website for an Australian zoo. The goal for the assignment was to hardcode as little as possible and use our javascript knowledge to populate the page.",
     link: "https://github.com/nathaliebuss/Group-zoo-assignment",
@@ -65,10 +66,12 @@ function displayProjects() {
 }
 displayProjects();
 
+// logic for colour changing header on scroll
 const menu = document.getElementById("menu");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
+    // console.log(window.scrollY);
     menu.classList.add("scrolled");
   } else {
     menu.classList.remove("scrolled");
