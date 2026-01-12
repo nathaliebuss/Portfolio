@@ -142,9 +142,9 @@ main {
 .card {
   background: #89023e;
   border-radius: 12px;
-  padding: 30px;
-  width: 400px;
-  max-width: 80%;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -245,7 +245,7 @@ main {
 
 /*--- CONTACT ---*/
 .email_link {
-  color: rgb(0, 0, 0);
+  color: white;
   background-color: #e94677;
   border-radius: 20px;
   display: inline-block;
