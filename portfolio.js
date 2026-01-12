@@ -66,7 +66,7 @@ function displayProjects() {
 }
 displayProjects();
 
-// logic for colour changing header on scroll
+// LOGIC FOR COLOUR CHANGING NAVBAR ON SCROLL
 const menu = document.getElementById("menu");
 
 window.addEventListener("scroll", () => {
@@ -77,3 +77,9 @@ window.addEventListener("scroll", () => {
     menu.classList.remove("scrolled");
   }
 });
+
+// UPDATES THE YEAR AUTOMATICALLY
+const footerYear = document.getElementById("spanYear");
+const currentYear = new Date().getFullYear();
+
+footerYear.textContent = currentYear;
