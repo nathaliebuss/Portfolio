@@ -50,7 +50,7 @@ function displayProjects() {
 
     const cardHTML = `
             <div class="card">
-                <img src="${project.image}" alt="${project.title}" />
+                <img src="${project.image}" alt="${project.title}" loading="lazy" />
                 <h3>${project.title}</h3>
                 <p>${project.description}</p>
                 <div class="tags">
